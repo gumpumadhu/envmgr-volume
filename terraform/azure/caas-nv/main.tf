@@ -64,7 +64,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "aks" {
 resource "local_file" "kubeconfig" {
   count = var.cloud_provider == "azure"  ? 1 : 0
   depends_on   = [azurerm_kubernetes_cluster.aks[0]]
-  filename     = "./kubeconfig"
+  filename     = "var.kubeconfig_kubeconfigpath"
   content      = azurerm_kubernetes_cluster.aks[0].kube_config_raw
 }
 
