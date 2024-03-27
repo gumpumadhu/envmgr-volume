@@ -147,3 +147,6 @@ variable "cloud_provider" {
   description = "Name of the cloud provider, ex: aws,azure,gcp,oci,etc"
   type = string
 }
+variable "kubeconfig_kubeconfigpath" {
+  description = "kubeconfig path"
+}
