@@ -129,7 +129,74 @@ variable "node_pool_config" {
     gpu_node_pool_min_count = number
     gpu_os_sku   = string
   }))
+ default   = ({
+ small = {
+    name          = "small"
+    cpu_node_count     = 1
+    cpu_node_pool_max_count = 2
+    cpu_node_pool_min_count = 1
+    cpu_os_sku   = "Ubuntu"
+    version = "1.28"
+    cpu_machine_type = "Standard_DS2_v2"
+    gpu_machine_type = "Standard_NC4as_T4_v3"
+    cpu_node_pool_disk_size    = 100
+    gpu_node_pool_disk_size    = 100
+    gpu_node_count     = 1
+    gpu_node_pool_max_count = 2
+    gpu_node_pool_min_count = 1
+    gpu_os_sku   = "Ubuntu"
+ }
+ medium = {
+    name          = "medium"
+    cpu_node_count     = 1
+    cpu_node_pool_max_count = 2
+    cpu_node_pool_min_count = 1
+    cpu_os_sku   = "Ubuntu"
+    version = "1.28"
+    cpu_machine_type = "Standard_DS3_v2"
+    gpu_machine_type = "Standard_NC12s_v3"
+    cpu_node_pool_disk_size    = 100
+    gpu_node_pool_disk_size    = 100
+    gpu_node_count     = 1
+    gpu_node_pool_max_count = 2
+    gpu_node_pool_min_count = 1
+    gpu_os_sku   = "Ubuntu"
+ }
+ large = {
+    name          = "large"
+    cpu_node_count     = 1
+    cpu_node_pool_max_count = 2
+    cpu_node_pool_min_count = 1
+    cpu_os_sku   = "Ubuntu"
+    version = "1.28"
+    cpu_machine_type = "Standard_DS4_v2"
+    gpu_machine_type = "Standard_NC24s_v3"
+    cpu_node_pool_disk_size    = 100
+    gpu_node_pool_disk_size    = 100
+    gpu_node_count     = 1
+    gpu_node_pool_max_count = 2
+    gpu_node_pool_min_count = 1
+    gpu_os_sku   = "Ubuntu"
+ }
+ xlarge = {
+    name          = "xlarge"
+    cpu_node_count     = 1
+    cpu_node_pool_max_count = 2
+    cpu_node_pool_min_count = 1
+    cpu_os_sku   = "Ubuntu"
+    version = "1.28"
+    cpu_machine_type = "Standard_DS5_v2"
+    gpu_machine_type = "Standard_NC96ads_A100_v4"
+    cpu_node_pool_disk_size    = 100
+    gpu_node_pool_disk_size    = 100
+    gpu_node_count     = 1
+    gpu_node_pool_max_count = 2
+    gpu_node_pool_min_count = 1
+    gpu_os_sku   = "Ubuntu"
+ }
+})
 }
+
 
 variable "project_name" {
   description = "Rafay Project Name"
