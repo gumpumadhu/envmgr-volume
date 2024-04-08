@@ -207,3 +207,7 @@ variable "node_pool_config" {
     gpu_count = number
   }))
 }
+
+variable "kubeconfig_kubeconfigpath" {
+  description = "kubeconfig path"
+}
