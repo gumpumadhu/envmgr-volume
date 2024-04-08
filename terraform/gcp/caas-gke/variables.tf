@@ -98,3 +98,6 @@ variable "cluster_name" {}
 variable "project_name" {}
 variable "blueprint" {}
 variable "blueprint_version" {}
+variable "kubeconfig_kubeconfigpath" {
+  description = "kubeconfig path"
+}
