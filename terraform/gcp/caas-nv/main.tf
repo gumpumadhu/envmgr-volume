@@ -199,7 +199,7 @@ data "template_file" "kubeconfig" {
 resource "local_file" "kubeconfig" {
   count = var.cloud_provider == "gcp"  ? 1 : 0
   content  = data.template_file.kubeconfig[0].rendered
-  filename = "kubeconfig"
+  filename     = var.kubeconfig_kubeconfigpath
 }
 
 
